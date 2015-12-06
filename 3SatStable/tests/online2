@@ -1,0 +1,5 @@
+c Example tiré du site : https://www.cl.cam.ac.uk/teaching/0607/Complexity/lecture6.pdf
+c 2ème page du pdf
+p cnf 6 2
+1 2 -3 0
+3 -2 -1 0

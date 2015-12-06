@@ -1,0 +1,6 @@
+c Example tiré de ce site : http://www.cs.dartmouth.edu/~ac/Teach/CS39-Winter09/SlidesAndNotes/lec28npcomplete.pdf
+c Page 5 du pdf
+p cnf 5 3
+1 -2 3 0
+-1 -2 5 0
+4 2 -5 0
