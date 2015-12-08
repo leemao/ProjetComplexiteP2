@@ -59,6 +59,7 @@ int toStable(char *filename,const char *output){
       for(int j=0;j<=variables*2;j++)
         sommets[i][j]=0;
     printf("variables propositionnelles : %d\nclauses : %d\n",variables,clauses);
+    //lecture clause par clause
     for(int i=0;i<clauses;i++){
       //fprintf(STABLE,"clause : %d\n",i);
       fscanf(SAT,"%d %d %d 0\n",&s1,&s2,&s3);
