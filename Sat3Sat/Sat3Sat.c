@@ -4,6 +4,15 @@
 
 #define TAILLE_MAX 1000 // Tableau de taille 1000
 
+/**
+ * Traitement d'une clause
+ * @param fichierSAT fichier SAT
+ * @param chaine servant à la lecture
+ * @param litteraux est le nombre de litteraux
+ * @param clauses est le nombre de clauses
+ * @author Tristan NARI
+ * @complexite O(n) n correspondant au nombre de fois que la chaine a été décomposé
+ */
 void traite_clause(FILE* fichierSAT,char * chaine,int * litteraux,int * clauses){
     FILE* fichierTemp = NULL;
     fichierTemp = fopen("temp", "a");
@@ -64,6 +73,16 @@ void traite_clause(FILE* fichierSAT,char * chaine,int * litteraux,int * clauses)
     fclose(fichierTemp);
 }
 
+/**
+ * transformation sat en 3SAT(sans la ligne p cnf)
+ * @param filename
+ * @param litteraux est le nombre de litteraux
+ * @param clauses est le nombre de clauses
+ * @author Tristan NARI
+ * @complexite O(c*n)
+ *  c est le nombre de clauses dans le fichier SAT de départ
+ *  n correspondant au nombre de fois que la chaine a été décomposé
+ */
 void sat_3sat(char* filename,int * litteraux, int * clauses){
     FILE* fichierSAT = NULL;
     FILE* fichier3SAT = NULL;
@@ -131,6 +150,7 @@ int main(int argc, char *argv[])
 
     fprintf(fichier3SATFin,"p cnf %d %d\n",litteraux,clauses);
     fseek(fichierTemp,0,SEEK_SET);
+    // O(n) n représentant le nombre de caractère dans le fichier temporaire "temp"
     if(fichierTemp != NULL && fichier3SATFin != NULL){
         while((caractereActuel = fgetc(fichierTemp)) != EOF)
         {
