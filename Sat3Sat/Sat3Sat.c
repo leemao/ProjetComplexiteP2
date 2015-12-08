@@ -137,7 +137,7 @@ int main(int argc, char *argv[])
     FILE* fichierTemp = NULL;
     FILE* fichier3SATFin = NULL;
     fichierTemp = fopen("temp", "r");
-    fichier3SATFin = fopen("3SAT", "w");
+    fichier3SATFin = fopen("3SAT.cnf", "w");
 
     fprintf(fichier3SATFin,"p cnf %d %d\n",litteraux,clauses);
     fseek(fichierTemp,0,SEEK_SET);
