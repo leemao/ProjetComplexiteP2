@@ -137,16 +137,7 @@ int main(int argc, char *argv[])
     FILE* fichierTemp = NULL;
     FILE* fichier3SATFin = NULL;
     fichierTemp = fopen("temp", "r");
-
-    char filenameSAT[250];
-    for(int i=0;i<250;i++)
-        filenameSAT[i]=0;
-    char* filenameSAT1="3SAT_";
-    char* filenameSAT2=filename;
-    strcat(filenameSAT,filenameSAT1);
-    strcat(filenameSAT,filenameSAT2);
-
-    fichier3SATFin = fopen(filenameSAT, "w");
+    fichier3SATFin = fopen("3SAT", "w");
 
     fprintf(fichier3SATFin,"p cnf %d %d\n",litteraux,clauses);
     fseek(fichierTemp,0,SEEK_SET);
