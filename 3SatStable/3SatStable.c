@@ -22,8 +22,8 @@ void copy_fic(const char *input,const char *output,int nbnodes){
     rewind(in);
     fprintf(out,"%d %d\n",nbnodes,aretes);
     while(!feof(in)){
-      ch = fgetc(in);
       fputc(ch,out);
+      ch = fgetc(in);
     }
   }
   else
