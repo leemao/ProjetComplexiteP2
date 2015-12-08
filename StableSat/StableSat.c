@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*
+ * Auteur: Tristan NARI
+ * Code que j'ai codé la première année de Master 1
+ * Complexité O(n²)
+ */
+
 int main(int argc, char *argv[])
 {
     if(argc != 3){
