@@ -46,7 +46,7 @@ void traite_clause(FILE* fichierSAT,char * chaine,int * litteraux,int * clauses)
                 }
                 /* Cas 3: Clause de taille 3 */
                 if(lit==3){
-                    fprintf(fichierTemp,"%d %d %d\n",tab_tmp[0],tab_tmp[1],tab_tmp[2]);
+                    fprintf(fichierTemp,"%d %d %d 0\n",tab_tmp[0],tab_tmp[1],tab_tmp[2]);
                     *clauses=(*clauses)+1;
                 }
                 /* Cas 4: Clause de taille 4 et plus */
