@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
 * copy_fic copie un fichier et rajoute en tête du fichier sortant le nombre de sommets du graphe et le nombre d'arêtes
